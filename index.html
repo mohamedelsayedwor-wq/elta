@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wearly — Demo Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="laptop">
+    <div class="camera"></div>
+    <div class="screen">
+      <header class="nav">
+        <a class="logo" href="#">Wearly</a>
+        <nav class="links">
+          <a href="#">Home</a>
+          <a class="active" href="#">T-shirt</a>
+          <a href="#">Hoodies</a>
+          <a href="#">Sweatshirts</a>
+          <a href="#">About Us</a>
+        </nav>
+        <div class="actions">
+          <button aria-label="Account" class="icon-btn">♙</button>
+          <button aria-label="Notifications" class="icon-btn bell">♧<span>4</span></button>
+        </div>
+      </header>
+
+      <main class="hero">
+        <section class="copy">
+          <p class="eyebrow">NEW COLLECTION</p>
+          <h1>Wear Confidence<br>Define Your Style.</h1>
+          <p class="desc">Discover premium T-shirts, hoodies, and sweatshirts designed for comfort, quality, and everyday expression.</p>
+          <button class="look-btn">Get the look <b>›</b></button>
+        </section>
+
+        <section class="product-stage">
+          <div class="hanger">
+            <div class="hook"></div>
+            <div class="hanger-line"></div>
+          </div>
+          <div id="shirt" class="shirt white">
+            <span class="collar"></span>
+            <span class="sleeve left"></span>
+            <span class="sleeve right"></span>
+            <span class="body"></span>
+          </div>
+          <div class="shadow"></div>
+          <p id="tagline" class="tagline">Dress Better.<br>Feel Better.</p>
+        </section>
+
+        <section class="details">
+          <div class="price"><strong id="price">$10,000</strong><del id="oldPrice">$15,000</del></div>
+          <p class="choose">Choose your size</p>
+          <div class="sizes">
+            <button>XL</button><button class="selected">2XL</button><button>3XL</button><button>4XL</button>
+          </div>
+        </section>
+      </main>
+
+      <button class="arrow prev" aria-label="Previous product">‹</button>
+      <button class="arrow next" aria-label="Next product">›</button>
+
+      <div class="thumbs">
+        <button class="thumb active" data-color="white"></button>
+        <button class="thumb pink" data-color="pink"></button>
+        <button class="thumb black" data-color="black"></button>
+      </div>
+
+      <footer class="footer">
+        <div class="socials"><span>◎</span><span>𝕏</span><span>●</span><span>in</span><span>♪</span></div>
+        <div class="counter"><span id="counter">01</span> / 03</div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

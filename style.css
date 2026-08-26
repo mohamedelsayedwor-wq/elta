@@ -1,0 +1,58 @@
+*{box-sizing:border-box}
+:root{--ink:#090909;--muted:#555;--paper:#f5f5f3}
+html,body{margin:0;min-height:100%;font-family:"DM Sans",sans-serif;background:#d7d7d5;color:var(--ink)}
+body{display:grid;place-items:center;padding:28px}
+.laptop{width:min(1100px,96vw);position:relative;padding:18px 10px 38px;border-radius:28px 28px 16px 16px;background:linear-gradient(#111,#050505 78%,#202020);box-shadow:0 35px 70px #0004}
+.laptop:after{content:"";position:absolute;left:50%;bottom:5px;transform:translateX(-50%);width:210px;height:20px;border-radius:0 0 70px 70px;background:#aaa}
+.camera{position:absolute;z-index:5;top:20px;left:50%;transform:translateX(-50%);width:150px;height:28px;background:#050505;border-radius:0 0 18px 18px}
+.camera:after{content:"";position:absolute;width:5px;height:5px;border-radius:50%;background:#30465a;top:7px;right:20px;box-shadow:0 0 8px #9cc}
+.screen{position:relative;min-height:690px;overflow:hidden;border-radius:18px;background:var(--paper);padding:30px 42px 22px}
+.nav{height:58px;display:grid;grid-template-columns:150px 1fr 150px;align-items:center}
+.logo{font-family:"Playfair Display",serif;font-size:24px;color:#111;text-decoration:none}
+.links{display:flex;justify-content:center;gap:34px}
+.links a{font-size:14px;color:#111;text-decoration:none;white-space:nowrap}
+.links a.active{color:#fff;background:#111;padding:4px 9px;border-radius:6px}
+.actions{display:flex;justify-content:flex-end;gap:16px}
+.icon-btn{position:relative;border:0;background:none;font-size:22px;cursor:pointer}
+.bell span{position:absolute;right:-4px;top:-3px;font:700 8px "DM Sans";color:#fff;background:#ef3340;border-radius:8px;padding:2px 4px}
+.hero{display:grid;grid-template-columns:1fr 1.1fr 1fr;align-items:center;min-height:530px}
+.copy{padding:0 0 30px}
+.eyebrow{font-size:11px;letter-spacing:3px;margin:0 0 20px;color:#777}
+h1{font:500 clamp(36px,4vw,61px)/1.05 "Playfair Display",serif;letter-spacing:-2px;margin:0 0 22px}
+.desc{max-width:330px;color:#444;font-size:13px;line-height:1.65}
+.look-btn{margin-top:18px;border:0;background:#080808;color:white;border-radius:30px;padding:13px 19px;font-weight:600;cursor:pointer;transition:.25s}
+.look-btn:hover{transform:translateY(-2px);padding-right:24px}
+.look-btn b{font-size:20px;line-height:0;margin-left:8px}
+.product-stage{position:relative;height:500px;display:grid;place-items:center}
+.hanger{position:absolute;top:20px;left:50%;transform:translateX(-50%);width:160px;height:70px}
+.hook{width:16px;height:22px;border:1.5px solid #888;border-bottom:0;border-radius:12px 12px 0 0;margin:auto}
+.hanger-line{position:absolute;left:10px;right:10px;top:22px;height:35px;border-top:1.5px solid #999;transform:rotate(0deg);clip-path:polygon(0 0,50% 100%,100% 0,98% 0,50% 84%,2% 0)}
+.shirt{position:absolute;top:88px;width:225px;height:245px;filter:drop-shadow(0 20px 15px #0001);transition:.5s cubic-bezier(.2,.8,.2,1);transform-origin:center}
+.shirt .body{position:absolute;left:45px;top:26px;width:135px;height:210px;border-radius:8px 8px 16px 16px;background:#fff;box-shadow:inset 0 0 0 1px #ddd}
+.shirt .sleeve{position:absolute;top:34px;width:70px;height:95px;background:#fff;z-index:0}
+.shirt .left{left:3px;transform:rotate(28deg);border-radius:12px 4px 18px 18px}
+.shirt .right{right:3px;transform:rotate(-28deg);border-radius:4px 12px 18px 18px}
+.collar{position:absolute;z-index:3;left:91px;top:25px;width:43px;height:27px;border:7px solid #eee;border-top:0;border-radius:0 0 50% 50%}
+.shirt.pink .body,.shirt.pink .sleeve{background:#df1767}.shirt.pink .collar{border-color:#c9145b}
+.shirt.black .body,.shirt.black .sleeve{background:#171717}.shirt.black .collar{border-color:#333}
+.shadow{position:absolute;top:355px;width:180px;height:24px;border-radius:50%;background:#0003;filter:blur(8px)}
+.tagline{position:absolute;top:390px;text-align:center;font:500 28px/1.25 "Playfair Display",serif;margin:0}
+.details{align-self:start;padding-top:85px;padding-left:40px}
+.price{display:flex;flex-direction:column;gap:10px;font-size:22px}
+.price strong{font-size:26px}.price del{color:#222}
+.choose{font-size:12px;font-weight:700;margin:26px 0 12px}
+.sizes{display:flex;gap:9px}
+.sizes button{width:38px;height:38px;border:0;border-radius:50%;background:#080808;color:#fff;font-weight:600;cursor:pointer}
+.sizes button:first-child{background:#fff;color:#111;border:1px solid #ddd}.sizes button.selected{outline:2px solid #bbb;outline-offset:3px}
+.arrow{position:absolute;top:425px;width:44px;height:44px;border:0;border-radius:13px;background:#333a;color:#fff;font-size:35px;line-height:1;cursor:pointer;transition:.2s}
+.arrow:hover{background:#111;transform:scale(1.06)}.prev{left:29%}.next{right:29%}
+.thumbs{position:absolute;right:42px;bottom:83px;display:flex;gap:12px}
+.thumb{width:25px;height:25px;border-radius:50%;border:2px solid transparent;background:#fff;box-shadow:0 2px 8px #0002;cursor:pointer}
+.thumb.active{outline:2px solid #111;outline-offset:3px}.thumb.pink{background:#df1767}.thumb.black{background:#111}
+.footer{position:absolute;left:42px;right:42px;bottom:22px;display:flex;justify-content:space-between;align-items:center}
+.socials{display:flex;gap:18px;align-items:center;font-weight:700;font-size:15px}.counter{font-size:12px;color:#666}
+@keyframes float{50%{transform:translateY(-10px)}}
+.float{animation:float 3.4s ease-in-out infinite}
+@media(max-width:850px){
+ body{padding:8px}.screen{padding:24px 20px;min-height:720px}.nav{grid-template-columns:1fr auto}.links{display:none}.hero{grid-template-columns:1fr;min-height:auto}.copy{padding-top:35px;text-align:center}.desc{margin:auto}.product-stage{height:380px;order:2}.details{position:absolute;right:20px;top:125px;padding:0}.price,.choose,.sizes{transform:scale(.82);transform-origin:right}.arrow{top:465px}.prev{left:24px}.next{right:24px}.thumbs{right:20px;bottom:76px}.footer{left:20px;right:20px}.tagline{top:300px;font-size:23px}.shirt{top:35px;transform:scale(.82)}
+}
