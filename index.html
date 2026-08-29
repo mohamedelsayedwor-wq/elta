@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#26384d"
+    >
+
+    <meta
+        name="description"
+        content="StudyDesk - منصتك التعليمية الشخصية"
+    >
+
+    <title>StudyDesk | منصة التعلم</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- Background -->
+
+    <div class="background">
+
+        <div class="grid"></div>
+
+        <div class="glow glow-1"></div>
+
+        <div class="glow glow-2"></div>
+
+    </div>
+
+
+    <!-- Floating Decorations -->
+
+    <div class="floating floating-book">
+        📚
+    </div>
+
+    <div class="floating floating-pencil">
+        ✏️
+    </div>
+
+    <div class="floating floating-star">
+        ✦
+    </div>
+
+
+    <!-- APP -->
+
+    <main class="app">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+                <div>
+
+                    <h2>
+                        StudyDesk
+                    </h2>
+
+                    <span>
+                        Personal Learning Hub
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <div class="platform-count">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    <span id="platformCount">
+                        0
+                    </span>
+
+                    <small>
+                        منصة
+                    </small>
+
+                </div>
+
+
+                <button
+                    class="theme-btn"
+                    id="themeBtn"
+                    title="تغيير المظهر"
+                >
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-overlay"></div>
+
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+
+                    <span class="pulse"></span>
+
+                    مساحة التعلم الخاصة بي
+
+                </div>
+
+
+                <h1>
+
+                    كل منصاتك التعليمية
+
+                    <strong>
+                        في مكان واحد.
+                    </strong>
+
+                </h1>
+
+
+                <p>
+
+                    بوابتك الشخصية للوصول السريع
+                    إلى منصات الكورسات والمذاكرة
+                    والبرمجة وكل مصادر التعلم.
+
+                </p>
+
+
+                <div class="hero-info">
+
+                    <div>
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        <span>
+                            Learn
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-code"></i>
+
+                        <span>
+                            Practice
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-rocket"></i>
+
+                        <span>
+                            Grow
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-decoration">
+
+                <div class="book-stack">
+
+                    <div class="book book-1">
+                        CODE
+                    </div>
+
+                    <div class="book book-2">
+                        LEARN
+                    </div>
+
+                    <div class="book book-3">
+                        GROW
+                    </div>
+
+                </div>
+
+
+                <div class="graduation">
+                    🎓
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SEARCH -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="ابحث عن منصة تعليمية..."
+                    autocomplete="off"
+                >
+
+
+                <kbd>
+                    Ctrl K
+                </kbd>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CATEGORIES -->
+
+        <section class="categories">
+
+            <button
+                class="category active"
+                data-category="all"
+            >
+
+                <i class="fa-solid fa-border-all"></i>
+
+                الكل
+
+            </button>
+
+
+            <button
+                class="category"
+                data-category="programming"
+            >
+
+                <i class="fa-solid fa-code"></i>
+
+                برمجة
+
+            </button>
+
+
+            <button
+                class="category"
+                data-category="languages"
+            >
+
+                <i class="fa-solid fa-language"></i>
+
+                لغات
+
+            </button>
+
+
+            <button
+                class="category"
+                data-category="math"
+            >
+
+                <i class="fa-solid fa-square-root-variable"></i>
+
+                رياضيات
+
+            </button>
+
+
+            <button
+                class="category"
+                data-category="courses"
+            >
+
+                <i class="fa-solid fa-book"></i>
+
+                كورسات
+
+            </button>
+
+        </section>
+
+
+
+        <!-- PLATFORMS -->
+
+        <section class="platform-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span>
+                        MY LEARNING PLATFORMS
+                    </span>
+
+                    <h2>
+                        منصاتي التعليمية
+                    </h2>
+
+                </div>
+
+
+                <div class="folder-icon">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="platform-grid"
+                id="platformGrid"
+            ></div>
+
+
+            <div
+                class="empty-state"
+                id="emptyState"
+            >
+
+                <div class="empty-icon">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+                <h3>
+                    مش لاقي المنصة 😅
+                </h3>
+
+                <p>
+                    جرّب تبحث باسم مختلف.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- STUDY NOTE -->
+
+        <section class="study-note">
+
+            <div class="note-icon">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    STUDY TIP
+                </span>
+
+                <h3>
+                    اتعلم كل يوم حاجة جديدة 🚀
+                </h3>
+
+                <p>
+                    الاستمرارية أهم من السرعة.
+                    خطوة صغيرة كل يوم بتعمل فرق كبير.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <div class="footer-line"></div>
+
+            <p>
+
+                Made with
+                <span>♥</span>
+                for learning
+
+            </p>
+
+            <small>
+
+                ©
+                <span id="year"></span>
+                StudyDesk
+
+            </small>
+
+        </footer>
+
+    </main>
+
+
+
+    <!-- TOAST -->
+
+    <div
+        class="toast"
+        id="toast"
+    >
+
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+        <span>
+            جاري فتح المنصة...
+        </span>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

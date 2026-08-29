@@ -1,0 +1,37 @@
+{
+    "name": "StudyDesk - منصة التعلم",
+    "short_name": "StudyDesk",
+
+    "description": "منصتك التعليمية الشخصية للوصول إلى جميع مصادر التعلم في مكان واحد.",
+
+    "start_url": "./",
+
+    "scope": "./",
+
+    "display": "standalone",
+
+    "orientation": "portrait",
+
+    "lang": "ar",
+
+    "dir": "rtl",
+
+    "theme_color": "#26384d",
+
+    "background_color": "#e8eef4",
+
+    "icons": [
+        {
+            "src": "ChatGPT Image 29 أغسطس 2026، 07_44_48 م.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "ChatGPT Image 29 أغسطس 2026، 07_54_49 م.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
