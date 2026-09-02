@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#26384d"
+    >
+
+    <meta
+        name="description"
+        content="StudyDesk - منصتك التعليمية الشخصية"
+    >
+
+    <title>StudyDesk | منصة التعلم</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- Background -->
+
+    <div class="background">
+
+        <div class="grid"></div>
+
+        <div class="glow glow-1"></div>
+
+        <div class="glow glow-2"></div>
+
+    </div>
+
+
+    <!-- Floating Decorations -->
+
+    <div class="floating floating-book">
+        📚
+    </div>
+
+    <div class="floating floating-pencil">
+        ✏️
+    </div>
+
+    <div class="floating floating-star">
+        ✦
+    </div>
+
+
+    <!-- APP -->
+
+    <main class="app">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+                <div>
+
+                    <h2>
+                        StudyDesk
+                    </h2>
+
+                    <span>
+                        Personal Learning Hub
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <div class="platform-count">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    <span id="platformCount">
+                        0
+                    </span>
+
+                    <small>
+                        منصة
+                    </small>
+
+                </div>
+
+
+                <button
+                    class="theme-btn"
+                    id="themeBtn"
+                    title="تغيير المظهر"
+                >
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-overlay"></div>
+
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+
+                    <span class="pulse"></span>
+
+                    مساحة التعلم الخاصة بي
+
+                </div>
+
+
+                <h1>
+
+                    كل منصاتك التعليمية
+
+                    <strong>
+                        في مكان واحد.
+                    </strong>
+
+                </h1>
+
+
+                <p>
+
+                    بوابتك الشخصية للوصول السريع
+                    إلى منصات الكورسات والمذاكرة
+                    والبرمجة وكل مصادر التعلم.
+
+                </p>
+
+
+                <div class="hero-info">
+
+                    <div>
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        <span>
+                            Learn
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-code"></i>
+
+                        <span>
+                            Practice
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-rocket"></i>
+
+                        <span>
+                            Grow
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-decoration">
+
+                <div class="book-stack">
+
+                    <div class="book book-1">
+                        CODE
+                    </div>
+
+                    <div class="book book-2">
+                        LEARN
+                    </div>
+
+                    <div class="book book-3">
+                        GROW
+                    </div>
+
+                </div>
+
+
+                <div class="graduation">
+                    🎓
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SEARCH -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="ابحث عن منصة تعليمية..."
+                    autocomplete="off"
+                >
+
+
+                <kbd>
+                    Ctrl K
+                </kbd>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CATEGORIES -->
+
+        <section class="categories">
+
+            <button
+                class="category active"
+                data-category="all"
+            >
+
+                <i class="fa-solid fa-border-all"></i>
+
+                الكل
+
+            </button>
+
+
+            <button
+                class="category"
+                data-category="programming"
+            >
+
+                <i class="fa-solid fa-code"></i>
+
+                برمجة
+
+            </button>
+
+
+            <button
+                class="category"
+                data-category="languages"
+            >
+
+                <i class="fa-solid fa-language"></i>
+
+                لغات
+
+            </button>
+
+
+            <button
+                class="category"
+                data-category="math"
+            >
+
+                <i class="fa-solid fa-square-root-variable"></i>
+
+                رياضيات
+
+            </button>
+
+
+            <button
+                class="category"
+                data-category="courses"
+            >
+
+                <i class="fa-solid fa-book"></i>
+
+                كورسات
+
+            </button>
+
+        </section>
+
+
+
+        <!-- PLATFORMS -->
+
+        <section class="platform-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span>
+                        MY LEARNING PLATFORMS
+                    </span>
+
+                    <h2>
+                        منصاتي التعليمية
+                    </h2>
+
+                </div>
+
+
+                <div class="folder-icon">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="platform-grid"
+                id="platformGrid"
+            ></div>
+
+
+            <div
+                class="empty-state"
+                id="emptyState"
+            >
+
+                <div class="empty-icon">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+                <h3>
+                    مش لاقي المنصة 😅
+                </h3>
+
+                <p>
+                    جرّب تبحث باسم مختلف.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- =====================================================
+             ORGANIZATION / WEEKLY STUDY PLANNER
+        ====================================================== -->
+
+        <section class="organization-section" id="organization">
+
+            <div class="organization-header">
+
+                <div>
+                    <span class="section-label">STUDY ORGANIZER</span>
+
+                    <h2>مركز تنظيم دراستي</h2>
+
+                    <p>
+                        خطط أسبوعك، تابع مهامك وشوف تقدمك الحقيقي.
+                    </p>
+                </div>
+
+                <div class="organization-badge">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>52 أسبوع</span>
+                </div>
+
+            </div>
+
+
+            <div class="week-control">
+
+                <button
+                    class="week-arrow"
+                    id="previousWeek"
+                    title="الأسبوع السابق"
+                    type="button"
+                >
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div class="current-week">
+
+                    <span>CURRENT WEEK</span>
+
+                    <strong id="currentWeekTitle">
+                        الأسبوع 1
+                    </strong>
+
+                    <small id="currentWeekDates">
+                        --
+                    </small>
+
+                </div>
+
+                <button
+                    class="week-arrow"
+                    id="nextWeek"
+                    title="الأسبوع التالي"
+                    type="button"
+                >
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+            </div>
+
+
+            <div class="week-selector-box">
+
+                <div class="week-selector-title">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>اختر أسبوع من السنة</span>
+                </div>
+
+                <select id="weekSelector" aria-label="اختيار الأسبوع"></select>
+
+            </div>
+
+
+
+            <div class="weekly-table-card">
+
+                <div class="weekly-table-heading">
+
+    <div>
+        <span>WEEKLY SCHEDULE</span>
+
+        <h3>📚 جدول الدراسة</h3>
+
+        <p id="scheduleModeText">
+            الجدول الأساسي مشترك مع كل أسابيع السنة.
+        </p>
+    </div>
+
+    <div class="schedule-actions">
+
+        <button
+            class="schedule-action-button"
+            id="editSchedule"
+            type="button"
+        >
+            <i class="fa-solid fa-pen"></i>
+            تعديل الجدول
+        </button>
+
+        <button
+            class="schedule-action-button"
+            id="detachSchedule"
+            type="button"
+        >
+            <i class="fa-solid fa-unlink"></i>
+            فصل الأسبوع
+        </button>
+
+        <button
+            class="schedule-action-button"
+            id="restoreSchedule"
+            type="button"
+            style="display:none"
+        >
+            <i class="fa-solid fa-link"></i>
+            إرجاع للجدول الأساسي
+        </button>
+
+        <div
+            class="table-save-badge"
+            id="scheduleSaveStatus"
+        >
+            <span class="save-dot"></span>
+            محفوظ تلقائيًا
+        </div>
+
+    </div>
+
+</div>
+                <div class="planner-table-wrapper">
+
+                    <table class="planner-table">
+
+                        <thead>
+                            <tr>
+                                <th>اليوم</th>
+                                <th>📖 المذاكرة</th>
+                                <th>💻 البرمجة</th>
+                                <th>🎯 الهدف</th>
+                                <th>📝 ملاحظات</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="weeklyScheduleBody">
+
+                            <tr data-day="saturday">
+                                <td class="day-name">السبت</td>
+                                <td><textarea data-schedule-field="study" placeholder="هتذاكر إيه؟"></textarea></td>
+                                <td><textarea data-schedule-field="coding" placeholder="هتتعلم إيه؟"></textarea></td>
+                                <td><textarea data-schedule-field="goal" placeholder="هدف اليوم..."></textarea></td>
+                                <td><textarea data-schedule-field="notes" placeholder="ملاحظاتك..."></textarea></td>
+                            </tr>
+
+                            <tr data-day="sunday">
+                                <td class="day-name">الأحد</td>
+                                <td><textarea data-schedule-field="study" placeholder="هتذاكر إيه؟"></textarea></td>
+                                <td><textarea data-schedule-field="coding" placeholder="هتتعلم إيه؟"></textarea></td>
+                                <td><textarea data-schedule-field="goal" placeholder="هدف اليوم..."></textarea></td>
+                                <td><textarea data-schedule-field="notes" placeholder="ملاحظاتك..."></textarea></td>
+                            </tr>
+
+                            <tr data-day="monday">
+                                <td class="day-name">الإثنين</td>
+                                <td><textarea data-schedule-field="study" placeholder="هتذاكر إيه؟"></textarea></td>
+                                <td><textarea data-schedule-field="coding" placeholder="هتتعلم إيه؟"></textarea></td>
+                                <td><textarea data-schedule-field="goal" placeholder="هدف اليوم..."></textarea></td>
+                                <td><textarea data-schedule-field="notes" placeholder="ملاحظاتك..."></textarea></td>
+                            </tr>
+
+                            <tr data-day="tuesday">
+                                <td class="day-name">الثلاثاء</td>
+                                <td><textarea data-schedule-field="study" placeholder="هتذاكر إيه؟"></textarea></td>
+                                <td><textarea data-schedule-field="coding" placeholder="هتتعلم إيه؟"></textarea></td>
+                                <td><textarea data-schedule-field="goal" placeholder="هدف اليوم..."></textarea></td>
+                                <td><textarea data-schedule-field="notes" placeholder="ملاحظاتك..."></textarea></td>
+                            </tr>
+
+                            <tr data-day="wednesday">
+                                <td class="day-name">الأربعاء</td>
+                                <td><textarea data-schedule-field="study" placeholder="هتذاكر إيه؟"></textarea></td>
+                                <td><textarea data-schedule-field="coding" placeholder="هتتعلم إيه؟"></textarea></td>
+                                <td><textarea data-schedule-field="goal" placeholder="هدف اليوم..."></textarea></td>
+                                <td><textarea data-schedule-field="notes" placeholder="ملاحظاتك..."></textarea></td>
+                            </tr>
+
+                            <tr data-day="thursday">
+                                <td class="day-name">الخميس</td>
+                                <td><textarea data-schedule-field="study" placeholder="هتذاكر إيه؟"></textarea></td>
+                                <td><textarea data-schedule-field="coding" placeholder="هتتعلم إيه؟"></textarea></td>
+                                <td><textarea data-schedule-field="goal" placeholder="هدف اليوم..."></textarea></td>
+                                <td><textarea data-schedule-field="notes" placeholder="ملاحظاتك..."></textarea></td>
+                            </tr>
+
+                            <tr data-day="friday">
+                                <td class="day-name">الجمعة</td>
+                                <td><textarea data-schedule-field="study" placeholder="هتذاكر إيه؟"></textarea></td>
+                                <td><textarea data-schedule-field="coding" placeholder="هتتعلم إيه؟"></textarea></td>
+                                <td><textarea data-schedule-field="goal" placeholder="هدف اليوم..."></textarea></td>
+                                <td><textarea data-schedule-field="notes" placeholder="ملاحظاتك..."></textarea></td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+            <div class="planner-dashboard">
+
+                <div class="progress-card">
+
+                    <div class="progress-card-top">
+
+                        <div>
+                            <span>WEEKLY PROGRESS</span>
+
+                            <h3>نسبة الإنجاز</h3>
+                        </div>
+
+                        <div
+                            class="progress-number"
+                            id="weeklyPercentage"
+                        >
+                            0%
+                        </div>
+
+                    </div>
+
+                    <div class="progress-track">
+                        <div
+                            class="progress-fill"
+                            id="weeklyProgress"
+                            style="width:0%"
+                        ></div>
+                    </div>
+
+                    <div class="progress-info">
+                        <span id="completedTasks">0 مكتملة</span>
+                        <span id="totalTasks">0 مهمة</span>
+                    </div>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <div class="mini-stat-icon">🎯</div>
+
+                    <div>
+                        <span>TARGET</span>
+                        <strong>100%</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <div class="mini-stat-icon">🏆</div>
+
+                    <div>
+                        <span>BEST WEEK</span>
+                        <strong id="bestWeek">--</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="task-creator">
+
+                <div class="task-input-wrapper">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="اكتب مهمة جديدة للأسبوع..."
+                        autocomplete="off"
+                        maxlength="180"
+                    >
+
+                </div>
+
+                <select id="taskPriority" aria-label="أولوية المهمة">
+
+                    <option value="normal">عادية</option>
+                    <option value="important">مهمة</option>
+                    <option value="urgent">مهمة جدًا</option>
+
+                </select>
+
+                <button
+                    id="addTask"
+                    class="add-task-button"
+                    type="button"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    إضافة مهمة
+                </button>
+
+            </div>
+
+
+            <div class="tasks-container">
+
+                <div class="tasks-header">
+
+                    <div>
+                        <span>WEEK TASKS</span>
+                        <h3>مهام الأسبوع</h3>
+                    </div>
+
+                    <div
+                        class="tasks-counter"
+                        id="tasksCounter"
+                    >
+                        0 / 0
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="tasks-list"
+                    id="tasksList"
+                ></div>
+
+
+                <div
+                    class="no-tasks"
+                    id="noTasks"
+                >
+
+                    <div class="no-tasks-icon">📚</div>
+
+                    <h3>الأسبوع لسه فاضي</h3>
+
+                    <p>
+                        ابدأ بإضافة أول مهمة وخلي الأسبوع ده إنجاز جديد.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="year-archive">
+
+                <div class="archive-header">
+
+                    <div>
+                        <span>YEAR ARCHIVE</span>
+                        <h3>أرشيف أسابيع السنة</h3>
+                    </div>
+
+                    <div class="archive-count">
+                        <i class="fa-solid fa-box-archive"></i>
+                        <span>52 أسبوع</span>
+                    </div>
+
+                </div>
+
+                <div
+                    class="weeks-archive"
+                    id="weeksArchive"
+                ></div>
+
+            </div>
+
+
+            <div class="planner-actions">
+
+                <button
+                    class="clear-week-button"
+                    id="clearCurrentWeek"
+                    type="button"
+                >
+                    <i class="fa-solid fa-trash-can"></i>
+                    مسح الأسبوع الحالي
+                </button>
+
+                <div
+                    class="planner-save-status"
+                    id="plannerSaveStatus"
+                >
+                    <span class="save-dot"></span>
+                    محفوظ تلقائيًا
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLEAR WEEK MODAL -->
+
+        <div
+            class="week-modal"
+            id="weekClearModal"
+            aria-hidden="true"
+        >
+
+            <div
+                class="week-modal-box"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="weekClearTitle"
+            >
+
+                <button
+                    class="week-modal-close"
+                    id="closeWeekModal"
+                    type="button"
+                    aria-label="إغلاق"
+                >
+                    ×
+                </button>
+
+                <div class="week-modal-icon">🗑️</div>
+
+                <span>RESET CURRENT WEEK</span>
+
+                <h3 id="weekClearTitle">تمسح الأسبوع ده؟</h3>
+
+                <p>
+                    كل المهام الخاصة بالأسبوع الحالي هتتمسح،
+                    لكن باقي أسابيع السنة هتفضل محفوظة.
+                </p>
+
+                <div class="week-modal-actions">
+
+                    <button
+                        id="cancelWeekClear"
+                        class="week-modal-cancel"
+                        type="button"
+                    >
+                        لأ، خليه
+                    </button>
+
+                    <button
+                        id="confirmWeekClear"
+                        class="week-modal-confirm"
+                        type="button"
+                    >
+                        مسح الأسبوع
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             DREAM FUTURE / MOTIVATION
+        ====================================================== -->
+
+        <section class="dream-section" id="dreamFuture">
+
+            <div class="dream-heading">
+                <span>DREAM • WORK • ACHIEVE</span>
+                <h3>🔥 أنت بتذاكر ليه؟</h3>
+                <p>خلي كل ساعة مذاكرة تقربك من المستقبل اللي نفسك فيه.</p>
+            </div>
+
+            <div class="dream-grid">
+
+                <article class="dream-card dream-programming">
+                    <div class="dream-bg"></div>
+                    <div class="dream-content">
+                        <div class="dream-icon"><i class="fa-solid fa-code"></i></div>
+                        <span>SOFTWARE ENGINEERING</span>
+                        <h3>💻 مهندس برمجيات</h3>
+                        <p>ابنِ مواقع وتطبيقات وأنظمة تخلي أفكارك حقيقة.</p>
+                    </div>
+                </article>
+
+                <article class="dream-card dream-engineering">
+                    <div class="dream-bg"></div>
+                    <div class="dream-content">
+                        <div class="dream-icon"><i class="fa-solid fa-gears"></i></div>
+                        <span>ENGINEERING</span>
+                        <h3>⚙️ كلية الهندسة</h3>
+                        <p>المذاكرة النهارده خطوة للمكان اللي نفسك توصله.</p>
+                    </div>
+                </article>
+
+                <article class="dream-card dream-aviation">
+                    <div class="dream-bg"></div>
+                    <div class="dream-content">
+                        <div class="dream-icon"><i class="fa-solid fa-plane"></i></div>
+                        <span>AVIATION</span>
+                        <h3>✈️ عالم الطيران</h3>
+                        <p>كل هدف كبير بدأ بفكرة ومجهود يومي صغير.</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="showroom">
+
+                <div class="showroom-heading">
+                    <span>SUCCESS GARAGE</span>
+                    <h3>🏎️ Dream Garage</h3>
+                    <p>العربية اللي بتحلم بيها خليك فاكر إنها نتيجة شغل وتعب.</p>
+                </div>
+
+                <div class="car-gallery" id="carGallery"></div>
+
+            </div>
+
+            <div class="companies">
+
+                <div class="companies-heading">
+                    <span>WHERE DO YOU WANT TO WORK?</span>
+                    <h3>💻 شركات البرمجة</h3>
+                    <p>اختار الحلم، وبعدها ابنِ المهارات اللي توصلك له.</p>
+                </div>
+
+                <div class="company-grid" id="companyGrid"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- STUDY NOTE -->
+
+        <section class="study-note">
+
+            <div class="note-icon">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    STUDY TIP
+                </span>
+
+                <h3>
+                    اتعلم كل يوم حاجة جديدة 🚀
+                </h3>
+
+                <p>
+                    الاستمرارية أهم من السرعة.
+                    خطوة صغيرة كل يوم بتعمل فرق كبير.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <div class="footer-line"></div>
+
+            <p>
+
+                Made with
+                <span>♥</span>
+                for learning
+
+            </p>
+
+            <small>
+
+                ©
+                <span id="year"></span>
+                StudyDesk
+
+            </small>
+
+        </footer>
+
+    </main>
+
+
+
+    <!-- TOAST -->
+
+    <div
+        class="toast"
+        id="toast"
+    >
+
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+        <span>
+            جاري فتح المنصة...
+        </span>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
