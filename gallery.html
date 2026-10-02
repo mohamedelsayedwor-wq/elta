@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#172c3e">
+<meta name="description" content="StudyDesk Gallery - معرض الصور الشخصي">
+<title>StudyDesk | معرض الصور</title>
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+<div class="gallery-bg"><span></span><span></span><span></span></div>
+<main class="gallery-app">
+<header class="gallery-topbar">
+  <a class="back-home" href="./index.html"><i class="fa-solid fa-arrow-right"></i><span>الرئيسية</span></a>
+  <div class="gallery-brand"><div class="brand-icon"><i class="fa-solid fa-images"></i></div><div><strong>StudyDesk Gallery</strong><small>معرضي الشخصي</small></div></div>
+  <button class="icon-button" id="themeToggle" type="button" title="تغيير المظهر"><i class="fa-solid fa-moon"></i></button>
+</header>
+<section class="gallery-hero">
+  <div><span class="eyebrow">MY PERSONAL GALLERY</span><h1>صورك، بطريقتك.</h1><p>احتفظ بصورك من الهاتف، رتبها في مجلدات، علّم المفضلة، وابحث عنها بسرعة.</p></div>
+  <label class="import-button" for="galleryPicker"><i class="fa-solid fa-cloud-arrow-up"></i><span>إضافة صور</span></label>
+  <input id="galleryPicker" type="file" accept="image/*" multiple hidden>
+</section>
+<section class="stats-row">
+  <div class="stat-card"><i class="fa-regular fa-images"></i><div><strong id="totalCount">0</strong><span>كل الصور</span></div></div>
+  <div class="stat-card" id="favorites"><i class="fa-solid fa-heart"></i><div><strong id="favoriteCount">0</strong><span>المفضلة</span></div></div>
+  <div class="stat-card"><i class="fa-solid fa-folder-open"></i><div><strong id="folderCount">0</strong><span>المجلدات</span></div></div>
+</section>
+<section class="gallery-shell">
+  <aside class="sidebar">
+    <div class="sidebar-title"><span>LIBRARY</span><button id="newFolder" type="button" title="مجلد جديد"><i class="fa-solid fa-plus"></i></button></div>
+    <nav id="folderNav" class="folder-nav"></nav>
+    <div class="storage-note"><i class="fa-solid fa-shield-halved"></i><div><strong>خصوصيتك أولاً</strong><small>الصور تظل داخل تخزين التطبيق على جهازك.</small></div></div>
+  </aside>
+  <div class="gallery-content">
+    <div class="toolbar">
+      <div class="search-wrap"><i class="fa-solid fa-magnifying-glass"></i><input id="searchGallery" type="search" placeholder="ابحث باسم الصورة..."></div>
+      <div class="toolbar-actions">
+        <select id="sortGallery" aria-label="ترتيب الصور"><option value="newest">الأحدث</option><option value="oldest">الأقدم</option><option value="name">الاسم</option></select>
+        <button id="viewGrid" class="view-button active" type="button" title="شبكة"><i class="fa-solid fa-grip"></i></button>
+        <button id="viewList" class="view-button" type="button" title="قائمة"><i class="fa-solid fa-list"></i></button>
+      </div>
+    </div>
+    <div id="activeFolderTitle" class="active-folder-title"><div><span>FOLDER</span><h2>كل الصور</h2></div><button id="clearCurrentFolder" type="button"><i class="fa-solid fa-broom"></i> تنظيف</button></div>
+    <div id="photoGrid" class="gallery-grid"></div>
+    <div id="emptyGallery" class="empty-gallery"><div class="empty-art"><i class="fa-regular fa-images"></i></div><h3>المعرض لسه فاضي</h3><p>ابدأ بإضافة الصور من هاتفك.</p><label class="import-button small" for="galleryPicker"><i class="fa-solid fa-plus"></i> إضافة أول صورة</label></div>
+  </div>
+</section>
+</main>
+<div id="viewer" class="viewer" aria-hidden="true">
+  <div class="viewer-backdrop"></div>
+  <header class="viewer-top"><button id="viewerClose" type="button"><i class="fa-solid fa-xmark"></i></button><div id="viewerName">الصورة</div><div class="viewer-tools"><button id="viewerFavorite" type="button"><i class="fa-regular fa-heart"></i></button><button id="viewerMove" type="button"><i class="fa-solid fa-folder-open"></i></button><button id="viewerDelete" type="button"><i class="fa-solid fa-trash"></i></button></div></header>
+  <button class="viewer-arrow next" id="viewerNext" type="button"><i class="fa-solid fa-chevron-left"></i></button><img id="viewerImage" alt=""><button class="viewer-arrow prev" id="viewerPrev" type="button"><i class="fa-solid fa-chevron-right"></i></button>
+  <footer class="viewer-bottom"><span id="viewerCounter">1 / 1</span><span id="viewerFolder"></span></footer>
+</div>
+<div id="folderModal" class="modal" aria-hidden="true"><div class="modal-box"><button class="modal-close" id="folderModalClose" type="button"><i class="fa-solid fa-xmark"></i></button><span class="eyebrow">FOLDER</span><h3 id="folderModalTitle">مجلد جديد</h3><input id="folderNameInput" maxlength="40" placeholder="اسم المجلد"><div class="modal-actions"><button id="folderCancel" type="button">إلغاء</button><button id="folderSave" type="button">حفظ</button></div></div></div>
+<div id="moveModal" class="modal" aria-hidden="true"><div class="modal-box"><button class="modal-close" id="moveModalClose" type="button"><i class="fa-solid fa-xmark"></i></button><span class="eyebrow">MOVE PHOTO</span><h3>انقل الصورة إلى</h3><div id="moveFolderList" class="move-folder-list"></div></div></div>
+<div id="appConfirmModal" class="app-confirm-modal" aria-hidden="true">
+  <div class="app-confirm-backdrop"></div>
+  <div class="app-confirm-box" role="dialog" aria-modal="true" aria-labelledby="appConfirmTitle">
+    <button class="app-confirm-close" id="appConfirmClose" type="button" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+    <div class="app-confirm-icon"><i class="fa-solid fa-trash-can"></i></div>
+    <span class="app-confirm-eyebrow">CONFIRM ACTION</span>
+    <h3 id="appConfirmTitle">هل تريد الحذف؟</h3>
+    <p id="appConfirmMessage">سيتم حذف العنصر من جهازك داخل التطبيق.</p>
+    <div class="app-confirm-actions">
+      <button id="appConfirmCancel" type="button">إلغاء</button>
+      <button id="appConfirmOk" class="danger" type="button">نعم، احذف</button>
+    </div>
+  </div>
+</div>
+<div id="toast" class="toast"></div>
+<script src="gallery.js"></script>
+</body>
+</html>
